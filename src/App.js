@@ -41,7 +41,7 @@ function App() {
           <HourChart weatherList={data.hourly} current={hourly}/>
         ) : (<div/>)}
       </div>
-    
+    <a href="https://github.com/SebastianBachAndersen/weather-app" style={{textDecoration: "underline"}}>Github</a>
 
     </div>
   )
