@@ -5,7 +5,7 @@ import { WiHumidity } from "react-icons/wi"
 
 const WeatherCard = ({weather, showHourly}) => {
     return (
-        <a onClick={() => showHourly(GetDate(weather.dt))}>
+        <a onClick={() => showHourly(GetDate(weather.dt))} href="#">
         <div className='card'>
         <h1>{GetDate(weather.dt)}</h1>
         
