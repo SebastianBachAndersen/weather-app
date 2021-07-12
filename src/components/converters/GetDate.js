@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GetDate = (t) => {
     var dt = new Date(t*1000)
     var d = dt.getDate()

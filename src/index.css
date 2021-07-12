@@ -27,6 +27,7 @@ code {
   border: 2px black;
   display: block;
   margin: 1em;
+  padding-bottom: 3em;
 }
 
 a {
