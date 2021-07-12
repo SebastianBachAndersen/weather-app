@@ -12,8 +12,8 @@ const WeatherCard = ({weather, showHourly}) => {
         <h3><WiThermometer/>{weather.temp.day}</h3>
         <h4>Feels like:  {weather.feels_like.day}</h4>
         <h3><WiHumidity/>{weather.humidity}</h3>
-        {WeatherIcon(weather.weather[0].id)}
-        <span> {weather.weather[0].description}</span>
+        
+        <h3>{WeatherIcon(weather.weather[0].id)} {weather.weather[0].description}</h3>
         </div>
         </a>
     )
