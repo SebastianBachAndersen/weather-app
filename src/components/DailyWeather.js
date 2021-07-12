@@ -1,11 +1,12 @@
+import GetDay from './converters/GetDate'
 import WeatherCard from './WeatherCard'
 
-const DailyWeather = ({ dailyWeatherList }) => {
+const DailyWeather = ({ dailyWeatherList, showHourly }) => {
     console.log(dailyWeatherList)
     return (
         <>
             {dailyWeatherList.map((weatherdata, index) => (
-                <WeatherCard key={index} weather={weatherdata}/>
+                <WeatherCard key={GetDay(weatherdata.dt)} weather={weatherdata} showHourly={showHourly}/>
             ))}
             
         </>

@@ -1,16 +1,15 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import GetDate from './components/converters/GetDate'
 import DailyWeather from './components/DailyWeather'
-import HourlyWeatherCard from './components/HourlyWeatherCard'
-import WeatherCard from './components/WeatherCard'
 import HourlyWeather from './components/HourlyWeather'
 
 function App() {
-
+  var d = new Date()
   const [lat, setLat] = useState([])
   const [long, setLong] = useState([])
   const [data, setData] = useState([])
-
+  const [hourly, setHourly] = useState(GetDate((d.getTime())/1000))
   useEffect(() => {
       const fetchWeatherData = async () => {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -28,19 +27,23 @@ function App() {
     fetchWeatherData()
   }, [lat, long])
 
+  const updateHourly = (day) => {
+    setHourly(day)
+  }
+
   return (
     <div className="App">
       
       <div className='dailyWeatherWrapper'>
       {(data.length !== 0 && data.cod !== '400') ? (
-          <DailyWeather dailyWeatherList={data.daily}/>
+          <DailyWeather dailyWeatherList={data.daily} showHourly={updateHourly}/>
       ): (
         <div></div>
       )}
     </div>  
     <div className='dailyWeatherWrapper'>
       {(data.length !== 0 && data.cod !== '400') ? (
-          <HourlyWeather HourlyWeatherList={data.hourly}/>
+          <HourlyWeather HourlyWeatherList={data.hourly} current={hourly}/>
       ): (
         <div></div>
       )}

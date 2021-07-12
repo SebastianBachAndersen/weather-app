@@ -19,11 +19,14 @@ code {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
   border: 2px black;
   display: block;
+  margin: 1em;
 }
 
 a {

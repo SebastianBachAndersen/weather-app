@@ -1,13 +1,13 @@
+import EpochToHour from './converters/EpochToHour'
 
-const HourlyWeatherCard = (weather) => {
-    const dt = new Date(weather.weather.temp*1000).toLocaleTimeString('en-IN')
+const HourlyWeatherCard = ({weather}) => {
     return (
         <a>
         <div className='card'>
-        <p>Tempature: {dt}</p>
-        <p>Tempature feels like: {weather.weather.feels_like}</p>
-        <p>Humidity: {weather.weather.humidity}</p>
-        <p>Weather: {weather.weather.pressure}</p>
+        <h2>Tempature: {EpochToHour(weather.dt)}</h2>
+        <p>Tempature feels like: {weather.feels_like}</p>
+        <p>Humidity: {weather.humidity}</p>
+        <p>Weather: {weather.pressure}</p>
         </div>
         </a>
     )

@@ -1,14 +1,17 @@
 import React from 'react'
+import GetDate from './converters/GetDate'
 import HourlyWeatherCard from './HourlyWeatherCard'
-import WeatherCard from './WeatherCard'
 
-const HourlyWeather = ( {HourlyWeatherList} ) => {
+const HourlyWeather = ( {HourlyWeatherList, current} ) => {
+    console.log(current)
     return (
         <div>
-            {HourlyWeatherList.map((weatherdata, index) => (
-                <HourlyWeatherCard key={index} weather={weatherdata}/>
+            {HourlyWeatherList.filter(weatherdata => GetDate(weatherdata.dt) === current)
+            .map(weatherdata => (  
+                <HourlyWeatherCard weather={weatherdata}/>
             ))}
         </div>
+        
     )
 }
 
