@@ -1,5 +1,3 @@
-import React from 'react'
-
 const EpochToHour = (t) => {
     var dt = new Date(t*1000)
     var h = dt.getHours()

@@ -1,4 +1,3 @@
-import { withTheme } from '@material-ui/core'
 import { Line } from 'react-chartjs-2'
 import EpochToHour from './converters/EpochToHour'
 import GetDate from './converters/GetDate'
