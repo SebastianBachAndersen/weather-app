@@ -10,7 +10,7 @@ const WeatherCard = ({weather, showHourly}) => {
         <h1>{GetDate(weather.dt)}</h1>
         
         <h3><WiThermometer/>{weather.temp.day}</h3>
-        <h4>Tempature feels like: {weather.feels_like.day}</h4>
+        <h4>Feels like:  {weather.feels_like.day}</h4>
         <h3><WiHumidity/>{weather.humidity}</h3>
         {WeatherIcon(weather.weather[0].id)}
         <span> {weather.weather[0].description}</span>

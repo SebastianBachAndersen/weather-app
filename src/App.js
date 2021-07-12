@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import GetDate from './components/converters/GetDate'
 import DailyWeather from './components/DailyWeather'
 import HourChart from './components/HourChart'
-import HourlyWeather from './components/HourlyWeather'
 
 function App() {
   var d = new Date()

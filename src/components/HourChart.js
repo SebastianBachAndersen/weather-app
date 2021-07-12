@@ -24,6 +24,7 @@ const HourChart = ({weatherList, current}) => {
           },
         ],
       };
+      //virker ikke :/
       const plugin = {
         id: 'custom_canvas_background_color',
         beforeDraw: (chart) => {
