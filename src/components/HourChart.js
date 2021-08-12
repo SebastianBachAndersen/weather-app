@@ -17,7 +17,7 @@ const HourChart = ({weatherList, current}) => {
             label: 'Tempature',
             data: temps,
             fill: false,
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#2A4D55',
             borderColor: '#2D6E7E',
             color: '#ff0000'
           },
@@ -30,7 +30,7 @@ const HourChart = ({weatherList, current}) => {
           const ctx = chart.canvas.getContext('2d');
           ctx.save();
           ctx.globalCompositeOperation = 'destination-over';
-          ctx.fillStyle = '#2D6E7E';
+          ctx.fillStyle = '#153B44';
           ctx.fillRect(0, 0, chart.width, chart.height);
           ctx.restore();
         }
