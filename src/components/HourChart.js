@@ -17,7 +17,7 @@ const HourChart = ({weatherList, current}) => {
             label: 'Tempature',
             data: temps,
             fill: false,
-            backgroundColor: '#2A4D55',
+            backgroundColor: '#50C5B7',
             borderColor: '#2D6E7E',
             color: '#ff0000'
           },
