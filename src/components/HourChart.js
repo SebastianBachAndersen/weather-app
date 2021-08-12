@@ -44,7 +44,7 @@ const HourChart = ({weatherList, current}) => {
       
     return (
         <div>
-            <Line data={data} options={options} plugins={plugin} width={1200} height={700}></Line>
+            <Line data={data} options={options} plugins={[plugin]} width={1200} height={700}></Line>
         </div>
     )
 }
